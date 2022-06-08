@@ -4,6 +4,8 @@
     |
     <router-link to="/products">Products</router-link>
     |
+    <router-link to="/products/new">Add Product</router-link>
+    |
     <router-link to="/signup">Signup</router-link>
     |
     <router-link to="/login">Login</router-link>
