@@ -29,6 +29,7 @@ export default {
       <h2>{{ product.name }}</h2>
       <p>{{ product.price }}</p>
       <p>{{ product.description }}</p>
+      <p><button v-on:click="$router.push(`/products/${product.id}`)">More Details</button></p>
     </div>
   </div>
 </template>
