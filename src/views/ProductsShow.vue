@@ -12,7 +12,14 @@ export default {
       this.product = response.data;
     });
   },
-  methods: {},
+  methods: {
+    destroyProduct: function () {
+      axios.delete("/products/" + this.$route.params.id + ".json").then((response) => {
+        console.log("This product has been successfully deleted", response.data);
+        this.$router.push("/products/");
+      });
+    },
+  },
 };
 </script>
 
@@ -22,6 +29,7 @@ export default {
     <p>{{ product.price }}</p>
     <p>{{ product.description }}</p>
     <p><button v-on:click="$router.push(`/products/edit/${product.id}`)">Edit this product</button></p>
+    <p><button v-on:click="destroyProduct">Delete this product</button></p>
   </div>
 </template>
 
